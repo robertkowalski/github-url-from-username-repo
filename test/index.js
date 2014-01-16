@@ -14,8 +14,8 @@ describe("github url from username/repo", function () {
     var url = getUrl("package")
     assert.deepEqual(null, url)
   })
-  it("returns undefined if no repo/user was given", function () {
+  it("returns null if no repo/user was given", function () {
     var url = getUrl()
-    assert.deepEqual(undefined, url)
+    assert.deepEqual(null, url)
   })
 })
