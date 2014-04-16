@@ -6,14 +6,12 @@ describe("github url from username/repo", function () {
     var url = getUrl("visionmedia/express")
     assert.equal("git://github.com/visionmedia/express", url)
   })
-  it("works with -", function () {
-    var url = getUrl("vision-media/express-package")
-    assert.equal("git://github.com/vision-media/express-package", url)
-  })
+
   it("returns null if it does not match", function () {
     var url = getUrl("package")
     assert.deepEqual(null, url)
   })
+
   it("returns null if no repo/user was given", function () {
     var url = getUrl()
     assert.deepEqual(null, url)
@@ -24,4 +22,13 @@ describe("github url from username/repo", function () {
     assert.equal("git://github.com/component/downloader.js", url)
   })
 
+  it("works with . in the beginning", function () {
+    var url = getUrl("component/.downloader.js")
+    assert.equal("git://github.com/component/.downloader.js", url)
+  })
+
+  it("works with -", function () {
+    var url = getUrl("component/-dow-nloader.j-s")
+    assert.equal("git://github.com/component/-dow-nloader.j-s", url)
+  })
 })
