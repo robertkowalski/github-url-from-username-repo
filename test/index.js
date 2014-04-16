@@ -18,7 +18,7 @@ describe("github url from username/repo", function () {
     var url = getUrl()
     assert.deepEqual(undefined, url)
   })
-  it('works for repos ending in .ext', function () {
+  it("works with .", function () {
     var url = getUrl("component/downloader.js")
     assert.equal("git://github.com/component/downloader.js", url)
   });
