@@ -1,6 +1,6 @@
 {
   "name": "github-url-from-username-repo",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Create urls from username/repo",
   "main": "index.js",
   "scripts": {
