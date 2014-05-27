@@ -9,6 +9,6 @@
 ```javascript
 
 var getUrl = require("github-url-from-username-repo")
-getUrl("visionmedia/express") // git://github.com/visionmedia/express
+getUrl("visionmedia/express") // https://github.com/visionmedia/express
 
 ```
