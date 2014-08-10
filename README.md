@@ -4,6 +4,13 @@
 
 # github-url-from-username-repo
 
+## API
+
+### getUrl(url, [forBrowser])
+
+Get's the url normalized for npm.
+If `forBrowser` is true, return a GitHub url that is usable in a webbrowser.
+
 ## Usage
 
 ```javascript

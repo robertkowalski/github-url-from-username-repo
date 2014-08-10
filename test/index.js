@@ -39,4 +39,20 @@ describe("github url from username/repo", function () {
     assert.equal("https://github.com/component/entejs#1c3e1fe71640b" +
       "4b477f04d947bd53c473799b277", url)
   })
+
+  describe("browser mode", function () {
+    it("is able to return urls for branches", function () {
+      var url = getUrl(
+        "component/entejs#1c3e1fe71640b4b477f04d947bd53c473799b277", true)
+
+      assert.equal("https://github.com/component/entejs/tree/1c3e1fe71640b" +
+        "4b477f04d947bd53c473799b277", url)
+    })
+    it("is able to return urls without a branch for the browser", function () {
+      var url = getUrl(
+        "component/entejs", true)
+
+      assert.equal("https://github.com/component/entejs", url)
+    })
+  })
 })
